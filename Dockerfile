@@ -26,4 +26,5 @@ RUN add-apt-repository universe
 RUN add-apt-repository restricted
 RUN add-apt-repository multiverse
 
-# project specific things
+# project specific
+RUN apt-get update && apt-get install -y -q virtualenv python2.7-dev libssl-dev python-setuptools && rm -rf /var/lib/apt/lists/*
